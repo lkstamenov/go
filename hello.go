@@ -19,6 +19,9 @@ func sqrt(x float64) (float64, error) {
   }
   return math.Sqrt(x), nil
 }
+func inc(x *int) {
+  *x++
+}
 
 func main () {
   // STDOUT
@@ -92,6 +95,10 @@ func main () {
 
   p := person{name: "Lachezar", age: 40}
   fmt.Println(p)
+  // Pointers
+  point := 7
+  inc(&point)
+  fmt.Println(point)
 }
 
 
