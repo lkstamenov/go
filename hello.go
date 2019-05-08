@@ -50,6 +50,8 @@ func main () {
     fmt.Println(i)
     i++
   }
+  // Loop through an array
+ 
 
 
 }
