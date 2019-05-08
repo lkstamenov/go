@@ -2,8 +2,23 @@ package main
 
 import (
    "fmt"
-
+   "errors"
+   "math"
 )
+
+
+// Functions
+
+func suma(x int, y int) int {
+  return x + y
+}
+
+func sqrt(x float64) (float64, error) {
+  if x < 0 {
+    return 0, errors.New("Undefined for negative number")
+  }
+  return math.Sqrt(x), nil
+}
 
 func main () {
   // STDOUT
@@ -51,7 +66,24 @@ func main () {
     i++
   }
   // Loop through an array
- 
+  arr := []string{"a", "b", "c"}
 
-
+  for index, value := range arr {
+     fmt.Println("index", index, "value", value)
+  }
+  // Loop and maps
+  m := make(map[string]string)
+  m["a"] = "alpha"
+  m["b"] = "beta"
+  for k, value := range m {
+    fmt.Println("key: ", k, "value:", value)
+  
+  } 
+  // Functions
+  result := suma(3,5)
+  fmt.Println(result)
+  squareroot, errorvalue := sqrt(4)
+  fmt.Println(squareroot, errorvalue)
 }
+
+
