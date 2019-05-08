@@ -38,4 +38,18 @@ func main () {
    delete(vertices, "square")
    fmt.Println(vertices)
 
+  // Loops
+  // for loop
+
+  for i :=0; i < 5; i++ { 
+    fmt.Println(i)
+  }
+  // while loop
+  i := 0
+  for i < 8 {
+    fmt.Println(i)
+    i++
+  }
+
+
 }
