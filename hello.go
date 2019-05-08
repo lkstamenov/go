@@ -84,6 +84,14 @@ func main () {
   fmt.Println(result)
   squareroot, errorvalue := sqrt(4)
   fmt.Println(squareroot, errorvalue)
+ // Struct
+  type person struct {
+   name string
+   age  int
+  }
+
+  p := person{name: "Lachezar", age: 40}
+  fmt.Println(p)
 }
 
 
